@@ -1,0 +1,55 @@
+# Environment — never commit secrets
+.env
+*.env
+
+# Personal data — never commit
+data/
+recordings/
+*.mp3
+*.mp4
+*.wav
+*.m4a
+*.webm
+
+# Database files
+*.db
+*.sqlite
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+venv/
+env/
+.venv/
+ENV/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Jupyter
+.ipynb_checkpoints
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# Docker
+docker-compose.override.yml
+
+# Logs
+*.log
+logs/
