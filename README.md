@@ -5,6 +5,7 @@ An AI-powered public speaking and storytelling coach. Practice, record, analyze,
 ## What it does
 
 - **Interactive Coach** — conversational practice sessions with story prompts, real-time feedback, and personalized drills
+- **Training Mode** — dimension-targeted micro-exercises with drill accountability, Coach's Pick, and auto difficulty scaling
 - **Async Analysis Pipeline** — submit audio/video recordings for deep transcription and multi-dimensional analysis
 - **Progress Dashboard** — track improvement across five skill dimensions over time
 
@@ -44,9 +45,17 @@ podium/
 │   ├── phases.md
 │   ├── skill-dimensions.md
 │   └── setup.md
-├── app/                    # Phase 1: Streamlit interactive coach
-├── pipeline/               # Phase 2: n8n + Whisper + analysis
-├── dashboard/              # Phase 3: progress tracking
+├── app/                        # Phase 1: Streamlit coach + training
+│   ├── main.py                 # UI entry point (Coach + Training tabs)
+│   ├── coach.py                # Claude coaching session logic
+│   ├── trainer.py              # Claude training exercise logic
+│   ├── prompts.py              # Coaching prompt templates
+│   ├── training_prompts.py     # Training prompt templates
+│   ├── database.py             # SQLite (sessions + training_sessions)
+│   ├── requirements.txt
+│   └── Dockerfile
+├── pipeline/                   # Phase 2: n8n + Whisper + analysis
+├── dashboard/                  # Phase 3: progress tracking
 ├── docker-compose.yml
 └── .env.example
 ```
